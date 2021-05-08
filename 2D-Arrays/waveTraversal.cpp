@@ -14,8 +14,6 @@ int main() {
         cout << endl;
     }
 
-    cout << "-----------" << endl;
-
     for (int col = 0; col < n; col++) {
         if (col % 2 == 0) {
             for (int row = 0; row < m; row++) {
