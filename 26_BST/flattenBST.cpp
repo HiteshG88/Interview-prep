@@ -27,11 +27,12 @@ linkedList flattenBST(node* root){
 
     // 2. there is only left size
     if(root->left != nullptr and root->right == nullptr){
+
         // get a linkedList from left side:
         linkedList leftLL = flattenBST(root->left);
         leftLL.tail->right = root;
 
-        // update the list l
+        // update the returning list l
         l.head = leftLL.head;
         l.tail = root;
         return l;
@@ -43,7 +44,7 @@ linkedList flattenBST(node* root){
         linkedList rightLL = flattenBST(root->right);
         root->right = rightLL.head;
 
-        // upadte the list l
+        // upadte the returning list l
         l.head = root;
         l.tail = rightLL.tail;
         return l;
