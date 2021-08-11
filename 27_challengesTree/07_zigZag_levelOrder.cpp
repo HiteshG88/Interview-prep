@@ -48,13 +48,13 @@ void levelOrder(node* root){
     if(root == nullptr)
         return;
 
-    queue<node*> q;
-    q.push(root);
-    q.push(nullptr);
+    // make a queue of pair of node* and level(int)
+    queue< pair<node*, int> > q;
+    q.push(make_pair(root, 0));
 
     while(!q.empty()){
 
-        node* temp = q.front();
+        pair<node*, int> temp = q.front();
 
         if(temp == nullptr){
             cout << endl;
@@ -76,28 +76,6 @@ void levelOrder(node* root){
     }
 }
 
-pair<int, bool> isBalanced(node *root){
-
-    pair<int, bool> p;
-
-    if(root == nullptr){
-        p.first = 0;
-        p.second = true;
-        return p;
-    }
-
-    pair<int, bool> l = isBalanced(root->left);
-    pair<int, bool> r = isBalanced(root->right);
-
-    p.first = max(l.first, r.first) + 1;
-
-    if(abs(l.first - r.first) < 2)
-        p.second = true;
-    else
-        p.second = false;
-
-    return p;
-}
 
 int main()
 {

@@ -1,5 +1,5 @@
 /*====================================================================
-=            find the pattern in string using sliding Window         =
+=              find the pattern in string using sliding Window         =
 ====================================================================*/
 /*
 
