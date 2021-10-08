@@ -23,5 +23,5 @@ int main(){
     insertAtHead(head, 50);
     print(head);
 
-    cout << kthNodeEnd(head, 1);
+    cout << kthNodeEnd(head, 3);
 }

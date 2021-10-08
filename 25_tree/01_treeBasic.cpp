@@ -1,4 +1,4 @@
-// #include <iostream>
+#include <iostream>
 #include <queue>
 using namespace std;
 
@@ -142,21 +142,21 @@ int sumNodes(node* root){
     return sum;
 }
 
-// int main(){
+int main(){
 
-//     node* root = preOrderBuild();
-//     // preOrder(root);
-//     // cout << endl;
-//     // postOrder(root);
-//     // cout << endl;
-//     // levelOrder(root);
+    node* root = preOrderBuild();
+    // preOrder(root);
+    // cout << endl;
+    // postOrder(root);
+    // cout << endl;
+    levelOrder(root);
 
-//     // cout << endl;
+    cout << endl;
 
-//     cout << countNodes(root) << endl;
-//     cout << sumNodes(root) << endl;
+    // cout << countNodes(root) << endl;
+    cout << sumNodes(root) << endl;
 
-//     return 0;
-// }
+    return 0;
+}
 
 // 1 2 3 -1 -1 4 -1 -1 5 6 -1 -1 7 -1 -1

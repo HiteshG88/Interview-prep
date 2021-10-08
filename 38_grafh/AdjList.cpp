@@ -2,12 +2,12 @@
 #include <list>
 using namespace std;
 
-class Grafh{
+class Graph{
     int V;
     list<int>* l;
 
 public:
-    Grafh(int V){
+    Graph(int V){
         this->V = V;
         l = new list<int>[V];
     }
@@ -17,7 +17,7 @@ public:
         l[y].push_back(x);
     }
 
-    void printGrafh(){
+    void printGraph(){
         for(int i = 0; i < V; i++){
             cout << "vertex " << i << " -> ";
             for(auto nbr: l[i]){
@@ -30,12 +30,12 @@ public:
 
 int main(){
 
-    Grafh g(3);
+    Graph g(3);
     g.addEdge(0,1);
     g.addEdge(1,2);
     g.addEdge(2,0);
 
-    g.printGrafh();
+    g.printGraph();
 
     return 0;
 }

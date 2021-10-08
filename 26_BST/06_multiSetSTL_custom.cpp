@@ -28,6 +28,7 @@ int main() {
     m.insert(p3);
     m.insert(p4);
 
+    // pairs would be sorted acc. to first val, if first val are similar, sort acc. to second
     for(auto p:m){
         cout<<p.first<<" - "<<p.second<<endl;
     }

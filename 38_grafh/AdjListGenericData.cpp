@@ -4,7 +4,7 @@
 #include <unordered_map>
 using namespace std;
 
-class Grafh{
+class Graph{
 
     unordered_map<string, list<pair<string, int>> > l;
 
@@ -37,7 +37,7 @@ public:
 
 int main(){
 
-    Grafh g;
+    Graph g;
     g.addEdge("A", "B", true, 20);
     g.addEdge("B", "D", true, 40);
     g.addEdge("A", "C", true, 10);
