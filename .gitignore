@@ -5,6 +5,7 @@
 !*.*
 
 example.cpp
+*.exe
 
 
 # Unignore all dirs
