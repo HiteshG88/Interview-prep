@@ -23,6 +23,7 @@ void bubbleSort_rec(int *arr, int r, int c){
     }
     bubbleSort_rec(arr, r, ++c);
   }
+  // start c from 0 again, as it act as a j pointer in this scenario.
   bubbleSort_rec(arr, --r, 0);
 }
 
