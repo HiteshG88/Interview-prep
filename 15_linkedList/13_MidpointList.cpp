@@ -1,8 +1,8 @@
 #include <iostream>
-// #include "linkedlist.cpp"
+#include "02_LinkedList.cpp"
 using namespace std;
 
-node* midpointList(node*head){
+node* midpointList(node* head){
     if(head == nullptr or head->next == nullptr)
         return head;
     node* s = head, *f = head->next;

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "linkedlist.cpp"
+#include "02_LinkedList.cpp"
 using namespace std;
 
 int kthNodeEnd(node*&head, int k){
@@ -16,12 +16,12 @@ int kthNodeEnd(node*&head, int k){
 
 int main(){
     node* head = nullptr;
-    insertAtHead(head, 10);
-    insertAtHead(head, 20);
-    insertAtHead(head, 30);
-    insertAtHead(head, 40);
-    insertAtHead(head, 50);
+    push_back(head, 10);
+    push_back(head, 20);
+    push_back(head, 30);
+    push_back(head, 40);
+    push_back(head, 50);
     print(head);
 
-    cout << kthNodeEnd(head, 3);
+    cout << kthNodeEnd(head, 3) << endl;
 }
