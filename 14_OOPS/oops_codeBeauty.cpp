@@ -39,13 +39,13 @@ polymorphism means a function which have many forms
 using namespace std;
 
 // this is an abstract class, any other class who would inherit this class, they have to provide the implementation of its pure virtual function.
-class AbtractEmployee
+class AbstractEmployee
 {
     // obligatory pure virtual function.
     virtual void AskForPromotion() = 0;
 };
 
-class Employee : AbtractEmployee
+class Employee : AbstractEmployee
 {
 protected:
     string name;
@@ -67,7 +67,7 @@ public:
         cout << "Hi my name is " << name << " and my age is " << age << " and i work in " << company << endl;
     }
 
-    // overriding the function from AbtractEmployee
+    // overriding the function from AbstractEmployee
     void AskForPromotion()
     {
         if (age > 30)
