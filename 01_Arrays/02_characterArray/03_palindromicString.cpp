@@ -4,14 +4,11 @@ using namespace std;
 
 bool isPalindrome(char arr[]) {
     int i = 0, j = strlen(arr) - 1;
-
-    while (i < j) {
-        if (arr[i] == arr[j]) {
-            i++;
-            j--;
-        }
-        else
+    
+    while (i++ < j--) {
+        if (arr[i] != arr[j])
             return false;
+        // i++; j--;
     }
     return true;
 }
@@ -25,5 +22,6 @@ int main() {
     else
         cout << "false";
 
+    cout << endl;
     return 0;
 }
