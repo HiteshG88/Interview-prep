@@ -35,6 +35,7 @@ bool isPalindrome(node* head) {
     // step2. reverse the 2nd half os the list
     node* revStart = reverse(mid->next);
     cout << "revStart: " << revStart->data << endl;
+    // cout << revStart << endl;
 
     // step3. take two pointer, one at start another at mid, and check all node are equal.
     while(revStart){

@@ -15,15 +15,13 @@ node* reverseBetween(node* head, int left, int right) {
         curr = curr->next;
     }
     
-    node* last = prev, *new_end = curr, *next = curr->next;
+    node* last = prev, *new_end = curr, *next = nullptr;
 
     for(int i = 0; curr != nullptr and i < right-left+1; i++){
+        next = curr->next;
         curr->next = prev;
         prev = curr;
         curr = next;
-        if(next != nullptr){
-            next = next->next;
-        }
     }
 
     if(last != nullptr){

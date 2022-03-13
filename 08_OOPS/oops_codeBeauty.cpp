@@ -126,6 +126,20 @@ public:
     }
 };
 
+class teacher : public Employee
+{
+public:
+    string subject;
+    teacher(string name, int age, string company, string subject) 
+    : Employee(name, age, company){
+        this->subject = subject; 
+    }
+    void PrepareLesson(){
+        cout << name << " is preparing lesson" << endl; 
+    }
+};
+
+
 int main()
 {
 

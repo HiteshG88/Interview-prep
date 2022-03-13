@@ -18,11 +18,13 @@ public:
         if(this->head == nullptr){
             this->head = new node(data);
             this->tail = this->head;
+            SIZE++;
             return;
         }
         node* new_node = new node(data);
         new_node->next = this->head;
         this->head = new_node;
+        SIZE++;
         return;
     }
 
@@ -34,6 +36,7 @@ public:
         node* new_node = new node(data);
         tail->next = new_node;
         this->tail = new_node;
+        SIZE++;
         return;
     }
 
@@ -45,6 +48,10 @@ public:
             this->head = this->head->next;
         } while (this->head != this->tail->next);
         cout << "TAIL" << endl;
+    }
+
+    int getSize(){
+        return this->SIZE;
     }
 
 };
@@ -59,6 +66,8 @@ int main(){
     Cl.push_back(50);
 
     Cl.print();
+
+    cout << Cl.getSize() << endl;
 
     return 0;
 }
