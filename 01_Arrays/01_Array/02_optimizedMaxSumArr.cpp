@@ -2,20 +2,9 @@
 #include <algorithm>
 using namespace std;
 
-void kadaneAlgo_for_maxSum(int arr[], int n) {
-    int max_sum = 0, curr_sum = 0;
-
-    for (int i = 0; i < n; i++) {
-        curr_sum += arr[i];
-        if (curr_sum < 0) {
-            curr_sum = 0;
-        }
-
-        max_sum = max(max_sum, curr_sum);
-    }
-    cout << "Max sum is: " << max_sum;
-}
-
+// Approach 1:
+// by using a cumulative sum array, or a preProsesed array.
+// Time: O(n^2) Space: O(n)
 
 void maxSubArray(int arr[], int cs_arr[], int n) {
     int max_sum = 0, curr_sum = 0;  // max sum encountered so far
@@ -43,6 +32,25 @@ void maxSubArray(int arr[], int cs_arr[], int n) {
     return;
 }
 
+// Approach 2:
+// Kadane's Algorithm
+// Time: O(n), Space: O(1) 
+
+void kadanesAlgo(int arr[], int n) {
+    int max_sum = 0, curr_sum = 0;
+
+    for (int i = 0; i < n; i++) {
+        curr_sum += arr[i];
+        if (curr_sum < 0) {
+            curr_sum = 0;
+        }
+
+        max_sum = max(max_sum, curr_sum);
+    }
+    cout << endl << "kadane's Algo =>  Max sum is: " << max_sum;
+}
+
+
 
 void fillArr(int arr[], int n) {
     for (int i = 0; i < n; i++)
@@ -58,24 +66,23 @@ void printArr(int arr[], int n) {
 }
 
 int main() {
-    int n; cin >> n;
-    int arr[n];
 
-    // make an arr cummulative sum array:
+    int arr[] = {-2,1,-3,4,-1,2,1,-5,4};
+    int n = sizeof(arr)/sizeof(arr[0]);
+
+    // make an arr cumulative sum array:
     // which store the sum of all element till that curr(including) element.
     int cs_arr[n];
-
-    cin >> arr[0];
     cs_arr[0] = arr[0];
 
     for (int i = 1; i < n; i++) {
-        cin >> arr[i];
         cs_arr[i] = cs_arr[i - 1] + arr[i];
     }
 
-    // maxSubArray(arr, cs_arr, n);
+    maxSubArray(arr, cs_arr, n);
 
-    kadaneAlgo_for_maxSum(arr, n);
+    kadanesAlgo(arr, n);
 
+    cout << endl;
     return 0;
 }
