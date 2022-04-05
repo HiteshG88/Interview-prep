@@ -18,7 +18,7 @@ void staircaseSearch(int arr[][100], int n, int key) {
     return;
 }
 
-void diaplay(int arr[][100], int n) {
+void display(int arr[][100], int n) {
     // print the arr:
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {

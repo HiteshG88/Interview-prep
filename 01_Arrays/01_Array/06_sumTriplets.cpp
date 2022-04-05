@@ -9,10 +9,6 @@ using namespace std;
 void usingSort(int arr[], int n, int t) {
     sort(arr, arr + n);
 
-    // for (int i = 0; i < n; i++) {
-    //     cout << arr[i] << ", ";
-    // }
-
     for (int i = 0; i < n; i++) {
 
         if (i > 0 && arr[i] == arr[i - 1]) // avoid duplicate triplets count

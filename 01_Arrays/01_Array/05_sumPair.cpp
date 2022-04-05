@@ -1,5 +1,5 @@
 /*
-Take as input N, the size of array. Take N more inputs and store that in an array. Take as input “target”, a number. Write a function which prints all pairs of numbers which sum to target.
+Take as input N, the size of array. Take N more inputs and store that in an array. Take as input “target”, a number. Write a function which prints //* all pairs of numbers which sum to target.
 */
 
 #include <iostream>
@@ -42,7 +42,7 @@ void usingMap(int arr[], int n, int t) {
                 cout << rem << " and "
                      << arr[i] << endl;
         }
-        m[arr[i]]++;
+        m[arr[i]]++;  // putting 1 inside the map for the key: arr[i].
     }
 }
 
