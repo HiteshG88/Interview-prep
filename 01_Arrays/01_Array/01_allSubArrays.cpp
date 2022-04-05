@@ -27,10 +27,13 @@ void printArr(int arr[], int n) {
 }
 
 int main() {
-    int n; cin >> n;
-    int arr[n];
 
-    fillArr(arr, n);
+    int arr[] = {1,2,3,4,5};
+    
+    int n = sizeof(arr)/sizeof(arr[0]);
+
+    // fillArr(arr, n);
+    
     printArr(arr, n);
 
     allSubArray(arr, n);
