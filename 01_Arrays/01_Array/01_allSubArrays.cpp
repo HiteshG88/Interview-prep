@@ -1,3 +1,5 @@
+// Q. given an array: print all its possible subArrays, {A subarray is commonly defined as a part or section of an array.}
+
 #include <iostream>
 using namespace std;
 
