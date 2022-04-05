@@ -16,7 +16,6 @@ void Permutation(vector<int>& nums, vector<int> ans) {
     for(int i = 0; i < nums.size(); i++){
         vector<int> left = {nums.begin(), nums.begin()+i};
         vector<int> right = {nums.begin()+i, nums.end()};
-                
     }
     return;
 }
