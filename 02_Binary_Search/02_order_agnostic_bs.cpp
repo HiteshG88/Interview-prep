@@ -41,6 +41,7 @@ int orderAgnosticBS(int arr[], int n, int k)
     return -1;
 }
 
+// binary search via recursion
 int binarySearch(int arr[], int s, int e, int k)
 {
     if (s > e)
@@ -57,19 +58,14 @@ int binarySearch(int arr[], int s, int e, int k)
 
 int main(int argc, char const *argv[])
 {
-    int n;
-    cin >> n;
-    int arr[n];
+    // int arr[] = {1,2,3,4,5,6,7,8,9};
+    int arr[] = {9,8,7,6,5,4,3,2,1};
+    int n = sizeof(arr)/sizeof(arr[0]);
 
-    for (int i = 0; i < n; i++)
-        cin >> arr[i];
-
-    cout << "target: ";
-    int k;
-    cin >> k;
+    int k = 2;
 
     cout << endl
-         << binarySearch(arr, 0, n - 1, k);
+         << orderAgnosticBS(arr, n, k) << endl;
 
     return 0;
 }
