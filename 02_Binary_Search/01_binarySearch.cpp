@@ -22,19 +22,12 @@ int binarySearch(int arr[], int n, int key) {
 
 int main(int argc, char const *argv[])
 {
-    int n; cin >> n;
-    int arr[n];
+    int arr[] = {1,2,3,4,5,6,7,8,9};
+    int n = sizeof(arr)/sizeof(arr[0]);
 
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
+    int key = 2;
 
-    int key;
-    cout << "enter the key: ";
-    cin >> key;
-
-    cout << binarySearch(arr, n, key);
+    cout << binarySearch(arr, n, key) << endl;
     return 0;
 }
 
