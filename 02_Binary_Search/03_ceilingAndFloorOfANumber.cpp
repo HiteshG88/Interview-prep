@@ -37,19 +37,13 @@ int floor(int arr[], int n, int k)
 
 int main()
 {
-    int n;
-    cin >> n;
-    int arr[n];
+    int arr[] = {1,2,3,4,5,6,7,9};
+    int n = sizeof(arr)/sizeof(arr[0]);
 
-    for (int i = 0; i < n; i++)
-        cin >> arr[i];
-
-    cout << "target: ";
-    int k;
-    cin >> k;
+    int k = 8;
 
     cout
-        << floor(arr, n, k);
+        << ceiling(arr, n, k) << endl;
 
     return 0;
 }
