@@ -15,20 +15,21 @@ stable sorting algos: the initial order of the same value should be maintained i
 #include <iostream>
 using namespace std;
 
-void bubbleSort_rec(int *arr, int r, int c){
+void bubbleSort_rec(int arr[], int r, int c){
   if(r == 0) return;
   if(c < r){
     if(arr[c] > arr[c+1]){
-      swap(arr[r], arr[c]);
+      swap(arr[c+1], arr[c]);
     }
-    bubbleSort_rec(arr, r, ++c);
+    bubbleSort_rec(arr, r, c+1);
   }
   // start c from 0 again, as it act as a j pointer in this scenario.
-  bubbleSort_rec(arr, --r, 0);
+  bubbleSort_rec(arr, r-1, 0);
 }
 
 
 void bubbleSort(int arr[], int n){
+  // @info: i is used as a counter here.
   for(int i = 0; i < n; i++){
     // imp: j should not always go to the last idx
     for(int j = 1; j < n-i; j++){
@@ -48,10 +49,12 @@ void printArr(int arr[], int n){
 
 int main(){
 
-  int arr[] = {5,4,3,2,1};
+  int arr[] = {5,4,3,2,1,6};
   int n = sizeof(arr)/sizeof(arr[0]);
 
-  bubbleSort_rec(arr, n, 0);
+  // bubbleSort(arr, n);
+
+  bubbleSort_rec(arr, n-1, 0);
 
   printArr(arr, n);
 
