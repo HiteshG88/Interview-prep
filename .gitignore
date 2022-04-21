@@ -5,6 +5,7 @@
 !*.*
 
 example.cpp
+example.c
 *.exe
 
 
